@@ -1,0 +1,92 @@
+{
+  "yield_rows_raw": 63691,
+  "pesticide_rows_raw": 4789,
+  "climate_area_years": 22736,
+  "excluded_aggregate_areas": {
+    "areas": [
+      "China"
+    ],
+    "rows": 802
+  },
+  "zero_yield_rows_removed": 5,
+  "areas_without_climate": [
+    "Belgium-Luxembourg",
+    "China, Hong Kong SAR",
+    "China, Taiwan Province of",
+    "Cook Islands",
+    "Czechoslovakia",
+    "Ethiopia PDR",
+    "French Guyana",
+    "French Polynesia",
+    "Guadeloupe",
+    "Martinique",
+    "Niue",
+    "Palestine",
+    "Réunion",
+    "Serbia and Montenegro",
+    "Sudan (former)",
+    "USSR",
+    "Yugoslav SFR"
+  ],
+  "rows_without_climate_area": 3714,
+  "climate_areas_without_yield": [
+    "Andorra",
+    "Greenland",
+    "Kiribati",
+    "Liechtenstein",
+    "Marshall Islands",
+    "Monaco",
+    "Northern Mariana Islands",
+    "Palau",
+    "Samoa",
+    "Seychelles",
+    "Tuvalu"
+  ],
+  "pesticide_areas_without_yield": [
+    "Bermuda",
+    "China, Macao SAR",
+    "Samoa",
+    "Seychelles"
+  ],
+  "yield_areas_without_pesticides": [
+    "Afghanistan",
+    "Benin",
+    "Bosnia and Herzegovina",
+    "Cambodia",
+    "Cuba",
+    "Democratic People's Republic of Korea",
+    "Democratic Republic of the Congo",
+    "Djibouti",
+    "Dominica",
+    "Equatorial Guinea",
+    "Eswatini",
+    "Faroe Islands",
+    "Gabon",
+    "Grenada",
+    "Liberia",
+    "Micronesia (Federated States of)",
+    "Nigeria",
+    "Puerto Rico",
+    "Saint Vincent and the Grenadines",
+    "Sao Tome and Principe",
+    "Serbia",
+    "Sierra Leone",
+    "Singapore",
+    "Solomon Islands",
+    "Somalia",
+    "South Sudan",
+    "United Arab Emirates",
+    "Uzbekistan"
+  ],
+  "rows_missing_same_year_climate": 3637,
+  "rows_missing_same_year_pesticides": 28054,
+  "final_panel_rows": 59170,
+  "final_panel_series": 1269,
+  "final_panel_areas": 185,
+  "modelling_rows": 30170,
+  "modelling_series": 1244,
+  "modelling_years": [
+    1991,
+    2016
+  ]
+}

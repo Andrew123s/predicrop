@@ -1,0 +1,52 @@
+{
+  "forecast_year": 2020,
+  "n_forecasts": 1204,
+  "forecast_warnings": [
+    "missing inputs imputed with training medians: log_y_lag2, log_y_lag3, growth_lag1, roll3_mean_log, roll5_mean_log, roll5_std_log, dev_from_roll5, trend_4y"
+  ],
+  "backtest_2017": {
+    "n": 1227,
+    "model": "RandomForest",
+    "metrics": {
+      "MAE": 8880.925404738044,
+      "RMSE": 20397.831754661347,
+      "R2": 0.972066958398459,
+      "Bias": -840.9467743703028,
+      "MAPE_pct": NaN,
+      "MedAPE_pct": 4.621191895667817,
+      "MAE_log": 0.1069292400179376,
+      "MASE": 1.0126592156839578
+    },
+    "naive_metrics": {
+      "MAE": 9188.101874490627,
+      "RMSE": 22425.808830145375,
+      "R2": 0.9662365786252086,
+      "Bias": -1364.7131214343929,
+      "MAPE_pct": NaN,
+      "MedAPE_pct": 4.195781468360953,
+      "MAE_log": 0.11336482773364255,
+      "MASE": 1.0476854172068601
+    },
+    "coverage": {
+      "80": {
+        "nominal_coverage": 0.8,
+        "observed_coverage": 0.8280358598207009,
+        "mean_width_hg_ha": 33005.00559110719,
+        "median_width_hg_ha": 21263.296375038997,
+        "median_relative_width": 0.3529892106116611,
+        "n": 1227
+      },
+      "90": {
+        "nominal_coverage": 0.9,
+        "observed_coverage": 0.9046454767726161,
+        "mean_width_hg_ha": 53923.72558457416,
+        "median_width_hg_ha": 33982.022724007074,
+        "median_relative_width": 0.553390733667432,
+        "n": 1227
+      }
+    },
+    "warnings": [
+      "missing inputs imputed with training medians: log_y_lag2, log_y_lag3, growth_lag1, roll3_mean_log, roll5_mean_log, roll5_std_log, dev_from_roll5, trend_4y, log_pesticides_lag1, pesticides_growth_lag1"
+    ]
+  }
+}

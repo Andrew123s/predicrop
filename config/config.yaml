@@ -1,0 +1,77 @@
+# Central configuration for the climate-yield forecasting platform.
+# All paths are relative to the repository root.
+
+seed: 42
+
+paths:
+  raw_dir: "."                     # the four original CSVs live at the repo root (never modified)
+  processed_dir: data/processed
+  models_dir: models
+  reports_dir: reports
+  figures_dir: reports/figures
+
+raw_files:
+  yield: yield.csv
+  pesticides: pesticides.csv
+  rainfall: rainfall.csv
+  temperature: temp.csv
+
+integration:
+  # FAO "China" is an aggregate of mainland + Taiwan + Hong Kong + Macao and would
+  # double-count the component series; the World Bank "China" polygon is matched
+  # to "China, mainland" instead (see data_integration.COUNTRY_NAME_MAP).
+  exclude_fao_areas: ["China"]
+  # Climatological baseline used for anomaly features. It ends before the first
+  # modelling target year, so it cannot leak information from evaluation years.
+  climate_baseline_years: [1901, 1960]
+
+task:
+  target_unit: "hg/ha"
+  horizon_years: 1
+  # Target years used for the benchmark. 1991 is the first year with a lag-1
+  # pesticide value (pesticides start 1990); 2016 is the last climate year.
+  first_target_year: 1991
+  last_target_year: 2016
+  train_end_year: 2008             # train: 1991-2008
+  validation_years: [2009, 2012]   # validation / conformal calibration
+  test_years: [2013, 2016]         # untouched until final evaluation
+  # Expanding-window CV folds used for tuning (validation years per fold);
+  # each fold trains on every target year before its first validation year.
+  cv_folds:
+    - [2005, 2006]
+    - [2007, 2008]
+    - [2009, 2010]
+    - [2011, 2012]
+
+features:
+  rolling_windows: [3, 5]
+  max_lag: 3
+
+uncertainty:
+  levels: [0.8, 0.9]
+  mondrian_min_group_size: 30      # per-crop conformal quantile only when >= this many calibration points
+
+scenarios:
+  rainfall_change_pct: [-20, -10, 10, 20]
+  temperature_change_c: [1.0, 2.0]
+  combined:
+    - name: hotter_drier
+      rainfall_change_pct: -10
+      temperature_change_c: 2.0
+    - name: hotter_wetter
+      rainfall_change_pct: 10
+      temperature_change_c: 1.0
+
+training:
+  mode: full                       # quick | full (override with --mode); committed results use full
+  modes:
+    quick:
+      n_iter: 6
+      rf_n_estimators: 150
+      boosting_n_estimators: 400
+    full:
+      n_iter: 15
+      rf_n_estimators: 300
+      boosting_n_estimators: 800
+  shap_sample_size: 2000
+  permutation_repeats: 5

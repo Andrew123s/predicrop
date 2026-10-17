@@ -1,0 +1,313 @@
+{
+  "mode": "full",
+  "split": {
+    "train": "1991-2008",
+    "validation": "2009-2012",
+    "test": "2013-2016"
+  },
+  "cv_folds": [
+    [
+      2005,
+      2006
+    ],
+    [
+      2007,
+      2008
+    ],
+    [
+      2009,
+      2010
+    ],
+    [
+      2011,
+      2012
+    ]
+  ],
+  "rows": {
+    "train": 20408,
+    "validation": 4857,
+    "test": 4905,
+    "development": 25265
+  },
+  "best_model": "RandomForest",
+  "best_tree_model": "RandomForest",
+  "best_params": {
+    "min_samples_leaf": 40,
+    "max_samples": 0.8,
+    "max_features": 0.3,
+    "max_depth": null
+  },
+  "mase_scale_hg_ha": 8769.905282242258,
+  "coverage": [
+    {
+      "method": "per-crop (Mondrian)",
+      "nominal_coverage": 0.8,
+      "observed_coverage": 0.818144750254842,
+      "mean_width_hg_ha": 32422.17862132891,
+      "median_width_hg_ha": 20677.018302625467,
+      "median_relative_width": 0.3470919807313448,
+      "n": 4905
+    },
+    {
+      "method": "pooled",
+      "nominal_coverage": 0.8,
+      "observed_coverage": 0.8130479102956167,
+      "mean_width_hg_ha": 36423.47334708511,
+      "median_width_hg_ha": 21031.70401861747,
+      "median_relative_width": 0.3471472073273038,
+      "n": 4905
+    },
+    {
+      "method": "per-crop (Mondrian)",
+      "nominal_coverage": 0.9,
+      "observed_coverage": 0.9027522935779817,
+      "mean_width_hg_ha": 52888.95167963974,
+      "median_width_hg_ha": 33453.89112338163,
+      "median_relative_width": 0.5486126919152121,
+      "n": 4905
+    },
+    {
+      "method": "pooled",
+      "nominal_coverage": 0.9,
+      "observed_coverage": 0.9072375127420998,
+      "mean_width_hg_ha": 59138.932121821716,
+      "median_width_hg_ha": 34148.1029145948,
+      "median_relative_width": 0.5636451783380607,
+      "n": 4905
+    }
+  ],
+  "conformal_quantiles_log": {
+    "0.8": 0.17321605806269258,
+    "0.9": 0.2790162053740139
+  },
+  "explainability": {
+    "model": "RandomForest",
+    "permutation_seconds": 12.977001799999925,
+    "shap": "ok",
+    "shap_seconds": 88.62834370000019,
+    "local_example": {
+      "area": "Iceland",
+      "crop": "Carrots and turnips",
+      "year": 2013,
+      "observed": 900000.0,
+      "abs_error": 487153.0028230082
+    }
+  },
+  "deploy": {
+    "history_forecaster": {
+      "train_years": [
+        1991,
+        2019
+      ],
+      "calibration_years": [
+        2015,
+        2019
+      ],
+      "forecast_year": 2020
+    },
+    "conditional_scenario": {
+      "train_years": [
+        1991,
+        2016
+      ]
+    }
+  },
+  "bias_by_crop": [
+    {
+      "crop": "Barley",
+      "model": "RandomForest",
+      "Bias": -803.6928697305575,
+      "MedAPE_pct": 7.836570675578422,
+      "n": 401
+    },
+    {
+      "crop": "Buckwheat",
+      "model": "RandomForest",
+      "Bias": -219.26143377843988,
+      "MedAPE_pct": 9.107952765778068,
+      "n": 110
+    },
+    {
+      "crop": "Carrots and turnips",
+      "model": "RandomForest",
+      "Bias": 115.52649402622889,
+      "MedAPE_pct": 4.726528509499301,
+      "n": 482
+    },
+    {
+      "crop": "Cauliflowers and broccoli",
+      "model": "RandomForest",
+      "Bias": 5390.904628872202,
+      "MedAPE_pct": 4.7521276963019945,
+      "n": 368
+    },
+    {
+      "crop": "Garlic",
+      "model": "RandomForest",
+      "Bias": -2531.5915684745187,
+      "MedAPE_pct": 4.707888167712859,
+      "n": 384
+    },
+    {
+      "crop": "Ginger",
+      "model": "RandomForest",
+      "Bias": -802.8731031065747,
+      "MedAPE_pct": 3.919640396430875,
+      "n": 148
+    },
+    {
+      "crop": "Hops",
+      "model": "RandomForest",
+      "Bias": -2.168910753628633,
+      "MedAPE_pct": 3.7596312505371934,
+      "n": 112
+    },
+    {
+      "crop": "Maize",
+      "model": "RandomForest",
+      "Bias": -828.372692525845,
+      "MedAPE_pct": 6.3531428588889,
+      "n": 652
+    },
+    {
+      "crop": "Oats",
+      "model": "RandomForest",
+      "Bias": -416.40747679720863,
+      "MedAPE_pct": 6.35058543402126,
+      "n": 296
+    },
+    {
+      "crop": "Onions, shallots, green",
+      "model": "RandomForest",
+      "Bias": -91.75900580304383,
+      "MedAPE_pct": 2.727829747075265,
+      "n": 200
+    },
+    {
+      "crop": "Potatoes",
+      "model": "RandomForest",
+      "Bias": -2286.090865826427,
+      "MedAPE_pct": 4.852212282450924,
+      "n": 606
+    },
+    {
+      "crop": "Rye",
+      "model": "RandomForest",
+      "Bias": -114.55000062854907,
+      "MedAPE_pct": 7.68697881529182,
+      "n": 248
+    },
+    {
+      "crop": "Sweet potatoes",
+      "model": "RandomForest",
+      "Bias": -2093.2705089743413,
+      "MedAPE_pct": 3.2015475801553688,
+      "n": 418
+    },
+    {
+      "crop": "Wheat",
+      "model": "RandomForest",
+      "Bias": -403.56327599662967,
+      "MedAPE_pct": 7.847468959059042,
+      "n": 480
+    },
+    {
+      "crop": "Barley",
+      "model": "Naive (last value)",
+      "Bias": -614.0523690773066,
+      "MedAPE_pct": 7.215217872152098,
+      "n": 401
+    },
+    {
+      "crop": "Buckwheat",
+      "model": "Naive (last value)",
+      "Bias": -289.8181818181813,
+      "MedAPE_pct": 6.2534192740315575,
+      "n": 110
+    },
+    {
+      "crop": "Carrots and turnips",
+      "model": "Naive (last value)",
+      "Bias": 134.57261410788334,
+      "MedAPE_pct": 4.273507376654799,
+      "n": 482
+    },
+    {
+      "crop": "Cauliflowers and broccoli",
+      "model": "Naive (last value)",
+      "Bias": 3903.774456521742,
+      "MedAPE_pct": 4.660792137312448,
+      "n": 368
+    },
+    {
+      "crop": "Garlic",
+      "model": "Naive (last value)",
+      "Bias": -2915.486979166666,
+      "MedAPE_pct": 4.882892027167693,
+      "n": 384
+    },
+    {
+      "crop": "Ginger",
+      "model": "Naive (last value)",
+      "Bias": -1506.0202702702748,
+      "MedAPE_pct": 2.971334138859237,
+      "n": 148
+    },
+    {
+      "crop": "Hops",
+      "model": "Naive (last value)",
+      "Bias": -221.94642857142782,
+      "MedAPE_pct": 6.94005230223877,
+      "n": 112
+    },
+    {
+      "crop": "Maize",
+      "model": "Naive (last value)",
+      "Bias": -1398.588957055214,
+      "MedAPE_pct": 5.566254817160278,
+      "n": 652
+    },
+    {
+      "crop": "Oats",
+      "model": "Naive (last value)",
+      "Bias": -275.3479729729742,
+      "MedAPE_pct": 6.726636770585497,
+      "n": 296
+    },
+    {
+      "crop": "Onions, shallots, green",
+      "model": "Naive (last value)",
+      "Bias": -701.7149999999946,
+      "MedAPE_pct": 2.5541684743641477,
+      "n": 200
+    },
+    {
+      "crop": "Potatoes",
+      "model": "Naive (last value)",
+      "Bias": -3016.8564356435722,
+      "MedAPE_pct": 4.562736680150201,
+      "n": 606
+    },
+    {
+      "crop": "Rye",
+      "model": "Naive (last value)",
+      "Bias": -48.576612903227684,
+      "MedAPE_pct": 8.421130886234431,
+      "n": 248
+    },
+    {
+      "crop": "Sweet potatoes",
+      "model": "Naive (last value)",
+      "Bias": -1723.7942583732045,
+      "MedAPE_pct": 2.9586016374929867,
+      "n": 418
+    },
+    {
+      "crop": "Wheat",
+      "model": "Naive (last value)",
+      "Bias": -360.722916666667,
+      "MedAPE_pct": 7.471594687605997,
+      "n": 480
+    }
+  ]
+}

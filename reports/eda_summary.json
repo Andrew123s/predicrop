@@ -1,0 +1,85 @@
+{
+  "distribution": {
+    "median_by_crop": {
+      "Barley": 20066.0,
+      "Buckwheat": 9632.0,
+      "Carrots and turnips": 192721.0,
+      "Cauliflowers and broccoli": 140832.0,
+      "Garlic": 61250.0,
+      "Ginger": 51356.0,
+      "Hops": 13500.0,
+      "Maize": 17298.0,
+      "Oats": 17169.0,
+      "Onions, shallots, green": 131062.0,
+      "Potatoes": 134180.0,
+      "Rye": 19517.0,
+      "Sweet potatoes": 66901.0,
+      "Wheat": 20000.0
+    },
+    "skew_raw": 2.907597151882919,
+    "skew_log": -0.0993051224701922
+  },
+  "climate": {
+    "temp_anom_2007_2016": 0.9979705374999999,
+    "temp_trend_c_per_decade_1961_2016": 0.22166854891727417,
+    "temp_trend_p": 7.904867108869971e-22,
+    "rain_trend_pct_per_decade_1961_2016": -0.06149091223324153,
+    "rain_trend_p": 0.7984259992010938
+  },
+  "climate_yield": {
+    "spearman_growth_vs_rain_anom_pct": [
+      0.03097269479788692,
+      5.668630279916193e-13
+    ],
+    "spearman_growth_vs_temp_anom_c": [
+      -0.0135815168478246,
+      0.0015766550463520914
+    ],
+    "spearman_wheat_level_vs_rain_total_mm": [
+      0.018411046034356834,
+      0.16157860694792373
+    ],
+    "spearman_wheat_level_vs_temp_mean_c": [
+      -0.41800955946597534,
+      2.285575632985779e-243
+    ]
+  },
+  "pesticides": {
+    "spearman_maize_level": [
+      0.4597895320678033,
+      2.494390230280254e-205
+    ],
+    "spearman_growth": [
+      -0.0037185506079028914,
+      0.5440111380988163
+    ],
+    "n_growth": 26627
+  },
+  "missing": {
+    "modelling_missing_share": {
+      "pesticides_growth_lag1": 0.1158,
+      "log_pesticides_lag1": 0.0809,
+      "trend_4y": 0.0507,
+      "log_y_lag3": 0.0255,
+      "roll5_std_log": 0.025,
+      "growth_lag1": 0.013,
+      "log_y_lag2": 0.013,
+      "roll3_mean_log": 0.0125,
+      "roll5_mean_log": 0.0123,
+      "dev_from_roll5": 0.0123
+    }
+  },
+  "outliers": {
+    "n": 57863,
+    "share_abs_gt_0.5": 0.0418920553721722,
+    "share_abs_gt_1": 0.0076560150700793255,
+    "kurtosis": 47.464270115067016
+  },
+  "autocorrelation": {
+    "lag1_acf_of_growth": -0.35338128245267764,
+    "p": 0.0,
+    "series_len_median": 59.0,
+    "series_ge_30": 902,
+    "n_series": 1269
+  }
+}

@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+build/
+dist/
+
+# Environments / IDE
+.venv/
+venv/
+.env
+.vscode/
+.idea/
+.claude/
+
+# Large regenerated intermediates (rebuilt by scripts/run_eda.py from the raw CSVs)
+data/processed/*.csv
+!data/processed/.gitkeep
+
+# OS
+Thumbs.db
+.DS_Store

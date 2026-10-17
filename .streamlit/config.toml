@@ -1,0 +1,9 @@
+[runner]
+magicEnabled = false
+
+[browser]
+gatherUsageStats = false
+
+[theme]
+base = "light"
+primaryColor = "#2e7d32"
